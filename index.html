@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lightMode.css">
+    <link rel="stylesheet" href="darkMode.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <script src="mode_switch_toggle.js"></script>
+    <title>jquery Effects and Animations</title>
+</head>
+<body>
+
+    <div class="flex-container" id="header_container">
+       <ul> 
+           <li style="float: left"><h2 id="header">Knowledge Check - Deziallia Morris</h2></li>
+           <li><h2 id="mode_switch" onclick="mode_switch_toggle()">Light Mode</h2></li>
+           <li id="links">
+            <button id="link_button"><h2>Links</h2></button>
+            <div id="link_menu">
+                <a href="image_swap/index.html" target="_blank">Image Swap</a>
+                <a href="carousel/index.html" target="_blank">Carousel</a>
+            </div> <!-- end of link menu-->
+            </li> 
+        </ul> <!-- end of list-->
+    </div> <!-- end of header_container-->
+
+    <div id="main_container">
+        <div id="content_container">
+            <div id="content_title"><label>Assignment</label></div>
+                <div id="prompt">
+                    Provide a detailed explanation for the following questions:
+                    <ol>
+                        <li>Describe how to stop and start a slide show that uses an interval timer.</li>
+                        <li>Describe how the jQuery animate() method works.</li>
+                        <li>Explain how the chaining of the methods for effects and the animate() method works and how 
+                            the callback functions for these methods can affect the results.</li>
+                        <li>Describe the use of the delay(), stop(), and finish() methods with effects and animations.</li>
+                        <li>Describe the use of easings with effects and animations.</li>
+                    </ol>
+                </div>
+                <div id="answer">
+                    <i>
+                        <p>To start a slideshow, simply code in an two effects and give them a duration.</p>
+                        <p>
+                            The first effect should be for displaying the image and the second effect should 
+                            be for the image's exit.
+                        </p>
+                        <p>
+                            To give the user more control over this aspect of a slideshow, 
+                            have a click event set in for when the user clicks the main image to start the show.
+                        </p>
+                        <p>
+                            To stop the show, have a double click event set for when the user double clicks the image 
+                            to stop the show.
+                        </p>
+                        <br>
+                        <p>
+                            The jQuery animate() method uses a property map, a duration, and a function callback 
+                            to create the illusion of movement on the webpage.
+                        </p>
+                        <br>
+                        <p>
+                            The chaining of methods for the effects and animate() method works just like chaining would 
+                            with other methods in that it stacks the current animation or effect lineup in a queue and each 
+                            effect/animation will go one after the other until the queue is exhausted or otherwise stopped.
+                        </p>
+                        <br>
+                        <p>The delay() method will wait to start an animation or effect for the duration of the given parameter.</p>
+                        <p>The stop() method will stop the currently playing animation or effect.</p>
+                        <p>The finish() method will stop all of the animations or effects no matter what position in the queue.</p>
+                        <br>
+                        <p>
+                            The easings add special movements with the effects and animations. They can be linked through a CDN and 
+                            can provide more variety in effects and animations.
+                        </p>
+                    </i>
+                </div>
+                <div id="citation">
+                    <br>
+                    <p>
+                    <i>
+                        Delamater, M. and Ruvalcaba, Z., n.d. Murach's JavaScript and jQuery. 3rd ed
+                    </i>
+                    </p>
+                </div>
+        </div> <!-- end of content_container-->
+        <div id="images_container">
+            <div id="image_title"><label>Images</label></div>
+            <div id="images">
+                <img class="images" src="images/screen1.png">
+                <img class="images" src="images/screen2.png">
+                <img class="images" src="images/screen3.png">
+        </div> <!-- end of images_container-->
+        <div id="footer"></div>
+    </div> <!-- end of main_container-->
+</body>
+</html>
